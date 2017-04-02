@@ -1,0 +1,20 @@
+﻿<Page x:Class="USG_tablet_UI.Pages.Urzadzenia"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1280" d:DesignWidth="800"
+	Title="Urzadzenia">
+
+    <Grid>
+        <Image x:Name="imgVideo" HorizontalAlignment="Left" Height="484" Margin="55,540,0,0" VerticalAlignment="Top" Width="664"/>
+        <Button x:Name="btnFreeze" Content="FREEZE" HorizontalAlignment="Left" Margin="571,94,0,0" VerticalAlignment="Top" Width="174" Height="53" Click="btnFreeze_Click"/>
+        <Button x:Name="btnGainUp" Content="GAIN UP" HorizontalAlignment="Left" Margin="126,293,0,0" VerticalAlignment="Top" Width="173" Height="49" Click="btnGainUp_Click"/>
+        <Button x:Name="btn8bit" Content="8-BIT GREYSCALE" HorizontalAlignment="Left" Margin="339,94,0,0" VerticalAlignment="Top" Width="173" Height="53" Click="btn8bit_Click"/>
+        <Button x:Name="btnGainDown" Content="GAIN DOWN" HorizontalAlignment="Left" Margin="126,356,0,0" VerticalAlignment="Top" Width="173" Height="44" Click="btnGainDown_Click"/>
+        <Label x:Name="lblGain" Content="Gain: " HorizontalAlignment="Left" Margin="166,424,0,0" VerticalAlignment="Top" Width="106"/>
+        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,1195,0,0" VerticalAlignment="Top" Width="780" Height="75" Click="btnWstecz_Click"/>
+
+    </Grid>
+</Page>
