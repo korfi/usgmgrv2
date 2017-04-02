@@ -26,7 +26,7 @@ namespace USG_tablet_UI
 
             // poniżej znajduja sie zakomentowane komendy SQL sluzace do stworzenia bazy i zapelnienia jej danymi
 
-            sql = "CREATE TABLE rodzajbadania (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, rodzaj varchar(50) NOT NULL);";
+            /*sql = "CREATE TABLE rodzajbadania (id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, rodzaj varchar(50) NOT NULL);";
             command = new SQLiteCommand(sql, dbConnection);
             command.ExecuteNonQuery();
 
@@ -60,7 +60,7 @@ namespace USG_tablet_UI
 
             sql = "INSERT INTO rodzajbadania (rodzaj) VALUES ('RTG');";
             command = new SQLiteCommand(sql, dbConnection);
-            command.ExecuteNonQuery();
+            command.ExecuteNonQuery();*/
             
         }
 
