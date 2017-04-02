@@ -13,7 +13,6 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         WindowStyle="None"
         WindowState= "Maximized" >
-    <!-- WindowStyle="None" to trzeba wrzucic do taga powyzej -->
     <Grid>
         <Frame Name="NavigationFrame" NavigationUIVisibility="Hidden" Margin="0,0,0,0" />
     </Grid>
