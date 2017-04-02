@@ -26,6 +26,7 @@ namespace USG_tablet_UI
         {
             InitializeComponent();        
             GlobalSettings.currentPage = "StartPage";
+      
         }
 
         private void btnDanePacjentow_Click(object sender, RoutedEventArgs e)

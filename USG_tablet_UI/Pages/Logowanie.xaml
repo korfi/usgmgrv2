@@ -5,12 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       d:DesignHeight="1280" d:DesignWidth="800"
-      Margin="0,0,0,0"
+      
 	Title="Logowanie">
 
-    <Grid>
+    <Grid Margin="0,0,0,0">
         <Image HorizontalAlignment="Left" Height="1280" Margin="0,0,0,0" VerticalAlignment="Top" Width="800" Source="pack://application:,,,/gfx/logowanie.png"/>
-        <Rectangle x:Name="rctgZaloguj" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="112" Margin="249,1005,0,0" Stroke="Black" VerticalAlignment="Top" Width="310" Opacity="0" MouseDown="rctgZaloguj_MouseDown"/>
+        <Rectangle x:Name="rctgZaloguj" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="112" Margin="264,1002,0,0" Stroke="Black" VerticalAlignment="Top" Width="310" Opacity="0" MouseDown="rctgZaloguj_MouseDown"/>
 
     </Grid>
 </Page>
