@@ -18,7 +18,7 @@ using System.Windows.Threading;
 using System.Net;
 using System.Net.Sockets;
 
-namespace USG_tablet_UI.Pages
+namespace USG_tablet_UI
 {
     /// <summary>
     /// Logika interakcji dla klasy Urzadzenia.xaml

@@ -1,4 +1,4 @@
-﻿<Page x:Class="USG_tablet_UI.Pages.Urzadzenia"
+﻿<Page x:Class="USG_tablet_UI.Urzadzenia"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,8 +8,8 @@
 	Title="Urzadzenia">
 
     <Grid>
-        <Image x:Name="imgVideo" HorizontalAlignment="Left" Height="295" VerticalAlignment="Top" Width="465"/>
-        <Button x:Name="btnFreeze" Content="FREEZE" HorizontalAlignment="Left" Margin="859,25,-233,0" VerticalAlignment="Top" Width="174" Height="53" Click="btnFreeze_Click"/>
+        <Image x:Name="imgVideo" HorizontalAlignment="Left" Height="471" VerticalAlignment="Top" Width="800"/>
+        <Button x:Name="btnFreeze" Content="FREEZE" HorizontalAlignment="Left" Margin="805,31,-179,0" VerticalAlignment="Top" Width="174" Height="53" Click="btnFreeze_Click"/>
         <Button x:Name="btnGainUp" Content="GAIN UP" HorizontalAlignment="Left" Margin="860,250,-233,0" VerticalAlignment="Top" Width="173" Height="49" Click="btnGainUp_Click"/>
         <Button x:Name="btn8bit" Content="8-BIT GREYSCALE" HorizontalAlignment="Left" Margin="842,116,-215,0" VerticalAlignment="Top" Width="173" Height="53" Click="btn8bit_Click"/>
         <Button x:Name="btnGainDown" Content="GAIN DOWN" HorizontalAlignment="Left" Margin="860,349,-233,0" VerticalAlignment="Top" Width="173" Height="44" Click="btnGainDown_Click"/>
