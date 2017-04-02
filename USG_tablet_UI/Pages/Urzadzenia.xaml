@@ -8,7 +8,7 @@
 	Title="Urzadzenia">
 
     <Grid>
-        <Image x:Name="imgVideo" HorizontalAlignment="Left" Height="627" VerticalAlignment="Top" Width="800"/>
+        <Image x:Name="imgVideo" HorizontalAlignment="Left" Height="295" VerticalAlignment="Top" Width="465"/>
         <Button x:Name="btnFreeze" Content="FREEZE" HorizontalAlignment="Left" Margin="859,25,-233,0" VerticalAlignment="Top" Width="174" Height="53" Click="btnFreeze_Click"/>
         <Button x:Name="btnGainUp" Content="GAIN UP" HorizontalAlignment="Left" Margin="860,250,-233,0" VerticalAlignment="Top" Width="173" Height="49" Click="btnGainUp_Click"/>
         <Button x:Name="btn8bit" Content="8-BIT GREYSCALE" HorizontalAlignment="Left" Margin="842,116,-215,0" VerticalAlignment="Top" Width="173" Height="53" Click="btn8bit_Click"/>
