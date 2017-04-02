@@ -9,9 +9,9 @@
 
     <Grid>
         <Button x:Name="btnDanePacjentow" Content="Dane Pacjentów" HorizontalAlignment="Left" Margin="158,235,0,0" VerticalAlignment="Top" Width="462" Height="123" Click="btnDanePacjentow_Click">
-            <!--<Button.Background>
-                <ImageBrush ImageSource=""/>
-            </Button.Background>-->
+            <Button.Background>
+                <ImageBrush ImageSource="pack://application:,,,/gfx/logowanie.png"/>
+            </Button.Background>
         </Button>
         <Button x:Name="btnUrzadzenia" Content="Urządzenia" HorizontalAlignment="Left" Margin="158,485,0,0" VerticalAlignment="Top" Width="462" Height="115" Click="btnUrzadzenia_Click"/>
         <Button x:Name="btnKalendarz" Content="Kalendarz" HorizontalAlignment="Left" Margin="158,741,0,0" VerticalAlignment="Top" Width="462" Height="119" Click="btnKalendarz_Click"/>
