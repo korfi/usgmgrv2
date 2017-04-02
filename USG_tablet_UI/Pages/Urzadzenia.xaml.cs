@@ -32,20 +32,20 @@ namespace USG_tablet_UI.Pages
             GlobalSettings.currentPage = "Urzadzenia";
             GlobalSettings.vh = new VideoHandler(imgVideo);
             GlobalSettings.vh.connect(GlobalSettings.uScanIP);          
-            GlobalSettings.conn = new TCPconnection(GlobalSettings.uScanIP, 13000);
-            if (GlobalSettings.gainRefreshTimer == null)
+            //GlobalSettings.conn = new TCPconnection(GlobalSettings.uScanIP, 13000);
+            /*if (GlobalSettings.gainRefreshTimer == null)
             {            
                 GlobalSettings.gainRefreshTimer = new DispatcherTimer();
                 GlobalSettings.gainRefreshTimer.Tick += new EventHandler(refreshGain);
                 GlobalSettings.gainRefreshTimer.Interval = new TimeSpan(0, 0, 0, 2);
 
             }
-            GlobalSettings.gainRefreshTimer.Start(); 
+            GlobalSettings.gainRefreshTimer.Start(); */
         }
 
         private void btnWstecz_Click(object sender, RoutedEventArgs e)
         {
-            GlobalSettings.gainRefreshTimer.Stop();
+            //GlobalSettings.gainRefreshTimer.Stop();
             GlobalSettings.vh.disconnect();
             if (GlobalSettings.conn != null) GlobalSettings.conn.disconnect();
             GlobalSettings.conn = null;
