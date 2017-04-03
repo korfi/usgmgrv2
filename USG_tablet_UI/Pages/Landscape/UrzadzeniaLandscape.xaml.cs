@@ -39,12 +39,7 @@ namespace USG_tablet_UI.Pages
 
         private void btnWstecz_Click(object sender, RoutedEventArgs e)
         {
-            GlobalSettings.gainRefreshTimer.Stop();
-            GlobalSettings.vh.disconnect();
-            if (GlobalSettings.conn != null) GlobalSettings.conn.disconnect();
-            GlobalSettings.conn = null;
-            GlobalSettings.vh = null;
-            GlobalSettings.gainRequestCompleted = true;
+            GlobalSettings.disconnectSocketStream();
             this.NavigationService.Navigate(new Uri("Pages\\Landscape\\StartPageLandscape.xaml", UriKind.Relative));
         }
 

@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Threading;
+using System.Net;
+using System.Net.Sockets;
+using System.IO;
 
 namespace USG_tablet_UI
 {
@@ -23,14 +26,16 @@ namespace USG_tablet_UI
         public static DispatcherTimer gainRefreshTimer = null;
         public static Boolean gainRequestCompleted = true;
         public static Boolean videoServiceDisconnectFlag = true;
+        public static TcpListener serverSocket = null;
+        public static TcpClient clientSocket = null;
+        public static TCPlistener paramListener = null;
+        public static StreamReader reader;
 
 
         public static void disconnectSocketStream() {
             //GlobalSettings.gainRefreshTimer.Stop();
             GlobalSettings.vh.disconnect();
             GlobalSettings.conn.disconnect();
-            //GlobalSettings.conn = null;
-            //GlobalSettings.vh = null;
             GlobalSettings.gainRequestCompleted = true;
         }
     }

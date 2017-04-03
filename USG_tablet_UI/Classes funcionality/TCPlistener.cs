@@ -15,41 +15,31 @@ namespace USG_tablet_UI
         private int port;
         Byte[] bytes = new Byte[256];
         String data = null;
+        StreamReader reader;
 
         public TCPlistener(int p)
         {
             this.port = p;
         }
 
-        public string getData()
+        public void connect()
         {
             IPAddress[] ipTab = Array.FindAll(
                 Dns.GetHostEntry(string.Empty).AddressList,
                 a => a.AddressFamily == AddressFamily.InterNetwork);
             IPAddress ipAdd = ipTab[0];
-            TcpListener serverSocket = new TcpListener(ipAdd, this.port);
-            TcpClient clientSocket = default(TcpClient);
-            serverSocket.Start();
+            GlobalSettings.serverSocket = new TcpListener(ipAdd, this.port);
+            GlobalSettings.clientSocket = default(TcpClient);
+            GlobalSettings.serverSocket.Start();
+            GlobalSettings.clientSocket = GlobalSettings.serverSocket.AcceptTcpClient();
+            NetworkStream stream = GlobalSettings.clientSocket.GetStream();
+            this.reader = new StreamReader(stream);
+        }
 
-            //Console.Write("Waiting for a connection at " + ipAdd.ToString() + "\r\n");
-            clientSocket = serverSocket.AcceptTcpClient();
-            //Console.WriteLine("Connected!\r\n");
-
-            data = null;
-            int i;
-
-            NetworkStream stream = clientSocket.GetStream();
-
-            while ((i = stream.Read(bytes, 0, bytes.Length)) != 0)
-            {
-                data = System.Text.Encoding.ASCII.GetString(bytes, 0, i);
-            }
-
-            clientSocket.Close();
-            clientSocket.GetStream().Close();
-            serverSocket.Stop();
-
-            return data;
+        public string getData()         // metoda blokujaca, musi byc uruchamiana w nowym watku
+        {
+             string currData = this.reader.ReadLine();
+             return currData;
         }
     }
 }

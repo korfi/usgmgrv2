@@ -14,7 +14,6 @@ namespace USG_tablet_UI
 
         private String IPaddr;
         private int port;
-        TcpClient client;
         NetworkStream ns;
         StreamWriter streamWriter;
 
@@ -22,22 +21,22 @@ namespace USG_tablet_UI
         {
             this.IPaddr = IP;
             this.port = po;
-            client = new TcpClient();
+            GlobalSettings.clientSocket = new TcpClient();
             connect();
         }
 
         private void connect()
         {
-            client.Connect(this.IPaddr, this.port);
-            ns = client.GetStream();
+            GlobalSettings.clientSocket.Connect(this.IPaddr, this.port);
+            ns = GlobalSettings.clientSocket.GetStream();
             streamWriter = new StreamWriter(ns);
             streamWriter.AutoFlush = true;
         }
 
         public void disconnect()
         {
-            client.GetStream().Close();
-            client.Close();
+            GlobalSettings.clientSocket.GetStream().Close();
+            GlobalSettings.clientSocket.Close();
         }
 
         public void send(String msg)

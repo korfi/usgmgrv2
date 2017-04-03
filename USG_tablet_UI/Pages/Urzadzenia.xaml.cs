@@ -17,6 +17,7 @@ using System.Windows.Forms;
 using System.Windows.Threading;
 using System.Net;
 using System.Net.Sockets;
+using System.IO;
 
 namespace USG_tablet_UI
 {
@@ -33,14 +34,18 @@ namespace USG_tablet_UI
             GlobalSettings.vh = new VideoHandler(imgVideo);
             GlobalSettings.vh.connect(GlobalSettings.uScanIP);          
             GlobalSettings.conn = new TCPconnection(GlobalSettings.uScanIP, 13000);
-            /*if (GlobalSettings.gainRefreshTimer == null)
+            //GlobalSettings.paramListener = new TCPlistener(12000);
+            //GlobalSettings.paramListener.connect();
+            GlobalSettings.reader = new StreamReader(GlobalSettings.clientSocket.GetStream());
+            if (GlobalSettings.gainRefreshTimer == null)
             {            
                 GlobalSettings.gainRefreshTimer = new DispatcherTimer();
                 GlobalSettings.gainRefreshTimer.Tick += new EventHandler(refreshGain);
-                GlobalSettings.gainRefreshTimer.Interval = new TimeSpan(0, 0, 0, 2);
+                GlobalSettings.gainRefreshTimer.Interval = new TimeSpan(0, 0, 0, 0, 500);
 
             }
-            GlobalSettings.gainRefreshTimer.Start(); */
+            //GlobalSettings.gainRefreshTimer.Start(); 
+            refreshGain();
         }
 
         private void btnWstecz_Click(object sender, RoutedEventArgs e)
@@ -57,11 +62,13 @@ namespace USG_tablet_UI
         private void btnGainUp_Click(object sender, RoutedEventArgs e)
         {
             GlobalSettings.conn.send("gaup");
+            refreshGain();
         }
 
         private void btnGainDown_Click(object sender, RoutedEventArgs e)
         {
             GlobalSettings.conn.send("gadn");
+            refreshGain();
         }
 
         private void btn8bit_Click(object sender, RoutedEventArgs e)
@@ -80,8 +87,29 @@ namespace USG_tablet_UI
                     try
                     {
                         Thread.CurrentThread.IsBackground = true;
-                        TCPlistener tl = new TCPlistener(12000);
-                        string content = tl.getData();
+                        //string content = GlobalSettings.paramListener.getData();
+                        string content = GlobalSettings.reader.ReadLine();
+                        this.lblGain.Dispatcher.Invoke((Action)delegate { lblGain.Content = content; });
+                        GlobalSettings.gainRequestCompleted = true;
+                    }
+                    catch (Exception ex) { GlobalSettings.gainRequestCompleted = true; };
+                }).Start();
+            }
+        }
+
+        private void refreshGain()
+        {
+            if (GlobalSettings.gainRequestCompleted == true)
+            {
+                GlobalSettings.gainRequestCompleted = false;
+                GlobalSettings.conn.send("ggai");
+                new Thread(() =>
+                {
+                    try
+                    {
+                        Thread.CurrentThread.IsBackground = true;
+                        //string content = GlobalSettings.paramListener.getData();
+                        string content = GlobalSettings.reader.ReadLine();
                         this.lblGain.Dispatcher.Invoke((Action)delegate { lblGain.Content = content; });
                         GlobalSettings.gainRequestCompleted = true;
                     }
