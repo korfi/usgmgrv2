@@ -87,7 +87,6 @@ namespace USG_tablet_UI
                     try
                     {
                         Thread.CurrentThread.IsBackground = true;
-                        //string content = GlobalSettings.paramListener.getData();
                         string content = GlobalSettings.reader.ReadLine();
                         this.lblGain.Dispatcher.Invoke((Action)delegate { lblGain.Content = content; });
                         GlobalSettings.gainRequestCompleted = true;
@@ -108,7 +107,6 @@ namespace USG_tablet_UI
                     try
                     {
                         Thread.CurrentThread.IsBackground = true;
-                        //string content = GlobalSettings.paramListener.getData();
                         string content = GlobalSettings.reader.ReadLine();
                         this.lblGain.Dispatcher.Invoke((Action)delegate { lblGain.Content = content; });
                         GlobalSettings.gainRequestCompleted = true;
