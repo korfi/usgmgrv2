@@ -24,8 +24,8 @@ namespace USG_tablet_UI
         public MainWindow()
         {
             InitializeComponent();
-            //NavigationFrame.Navigate(new Logowanie());
-            NavigationFrame.Navigate(new Urzadzenia());
+            NavigationFrame.Navigate(new Logowanie());
+            //NavigationFrame.Navigate(new Urzadzenia());
             GlobalSettings.beaconWindow = new BeaconWindow();
             GlobalSettings.mainWindow = this;
             Microsoft.Win32.SystemEvents.DisplaySettingsChanged += new System.EventHandler(orientationChanged);
