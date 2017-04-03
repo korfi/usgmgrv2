@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using System.IO;
 
 namespace USG_tablet_UI
 {
@@ -13,38 +14,36 @@ namespace USG_tablet_UI
 
         private String IPaddr;
         private int port;
-        Socket s = null;
+        TcpClient client;
+        NetworkStream ns;
+        StreamWriter streamWriter;
 
         public TCPconnection(String IP, int po)
         {
             this.IPaddr = IP;
             this.port = po;
+            client = new TcpClient();
             connect();
         }
 
         private void connect()
         {
-            s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPAddress ipAdd = System.Net.IPAddress.Parse(this.IPaddr);
-            IPEndPoint remoteEP = new IPEndPoint(ipAdd, this.port);
-
-            s.Connect(remoteEP);
+            client.Connect(this.IPaddr, this.port);
+            ns = client.GetStream();
+            streamWriter = new StreamWriter(ns);
+            streamWriter.AutoFlush = true;
         }
 
         public void disconnect()
         {
-            s.Disconnect(true);
-            s.Close();
+            client.GetStream().Close();
+            client.Close();
         }
 
         public void send(String msg)
-        {
-            try                    // bo nie mozna uzyskac dostepu do usunietego obiektu po powrocie do glownego ekranu
-            {           
-                byte[] byData = System.Text.Encoding.ASCII.GetBytes(msg);
-                s.Send(byData);
-            }
-            catch (Exception ex) { }
+        {       
+            //byte[] byteData = System.Text.Encoding.ASCII.GetBytes(msg);
+            streamWriter.WriteLine(msg);
         }
 
 

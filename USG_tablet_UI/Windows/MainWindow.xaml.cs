@@ -23,7 +23,7 @@ namespace USG_tablet_UI
     {
         public MainWindow()
         {
-            InitializeComponent();  // test
+            InitializeComponent();
             NavigationFrame.Navigate(new Logowanie());
             //NavigationFrame.Navigate(new Urzadzenia());
             GlobalSettings.beaconWindow = new BeaconWindow();

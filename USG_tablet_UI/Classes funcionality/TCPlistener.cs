@@ -46,6 +46,7 @@ namespace USG_tablet_UI
             }
 
             clientSocket.Close();
+            clientSocket.GetStream().Close();
             serverSocket.Stop();
 
             return data;

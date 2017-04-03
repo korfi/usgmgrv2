@@ -32,7 +32,7 @@ namespace USG_tablet_UI
             GlobalSettings.currentPage = "Urzadzenia";
             GlobalSettings.vh = new VideoHandler(imgVideo);
             GlobalSettings.vh.connect(GlobalSettings.uScanIP);          
-            //GlobalSettings.conn = new TCPconnection(GlobalSettings.uScanIP, 13000);
+            GlobalSettings.conn = new TCPconnection(GlobalSettings.uScanIP, 13000);
             /*if (GlobalSettings.gainRefreshTimer == null)
             {            
                 GlobalSettings.gainRefreshTimer = new DispatcherTimer();
@@ -45,12 +45,7 @@ namespace USG_tablet_UI
 
         private void btnWstecz_Click(object sender, RoutedEventArgs e)
         {
-            //GlobalSettings.gainRefreshTimer.Stop();
-            GlobalSettings.vh.disconnect();
-            if (GlobalSettings.conn != null) GlobalSettings.conn.disconnect();
-            GlobalSettings.conn = null;
-            GlobalSettings.vh = null;
-            GlobalSettings.gainRequestCompleted = true;
+            GlobalSettings.disconnectSocketStream();
             this.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
         }
 
