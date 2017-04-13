@@ -73,11 +73,19 @@ namespace USG_tablet_UI
 
                     Application.Current.Dispatcher.Invoke((Action)(() =>
                     {
-                        BitmapImage bmi = new BitmapImage();
-                        bmi.BeginInit();
-                        bmi.StreamSource = ms;
-                        bmi.EndInit();
-                        this.image.Source = bmi;
+                        try
+                        {
+                            BitmapImage bmi = new BitmapImage();
+                            bmi.BeginInit();
+                            bmi.StreamSource = ms;
+                            bmi.EndInit();
+                            this.image.Source = bmi;
+                        }
+                        catch (Exception ex)
+                        {
+
+                        }
+                        
                     }));
                 }
                 catch (ArgumentException e)
