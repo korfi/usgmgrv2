@@ -31,7 +31,6 @@ namespace USG_tablet_UI
         {
             InitializeComponent();
             GlobalSettings.currentPage = "Urzadzenia";
-            
             GlobalSettings.vh = new VideoHandler(imgVideo);
             GlobalSettings.vh.connect(GlobalSettings.uScanIP);          
             GlobalSettings.conn = new TCPconnection(GlobalSettings.uScanIP, 13000);
@@ -46,8 +45,11 @@ namespace USG_tablet_UI
 
             }
             //GlobalSettings.gainRefreshTimer.Start(); 
-            refreshGain();
             refreshDepth();
+            Thread.Sleep(10);
+            refreshTx();
+            Thread.Sleep(10);
+            refreshGain();
         }
 
         private void btnFreeze_Click(object sender, RoutedEventArgs e)
@@ -150,12 +152,14 @@ namespace USG_tablet_UI
         private void btnDepthUp_Click(object sender, RoutedEventArgs e)
         {
             GlobalSettings.conn.send("arup");
+            refreshDepth();
             
         }
 
         private void btnDepthDown_Click(object sender, RoutedEventArgs e)
         {
             GlobalSettings.conn.send("ardn");
+            refreshDepth();
         }
 
         private void btnSaveImage_Click(object sender, RoutedEventArgs e)
