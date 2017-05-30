@@ -46,11 +46,11 @@ namespace USG_tablet_UI
             }*/
             //GlobalSettings.gainRefreshTimer.Start(); 
             refreshDepth();
-            Thread.Sleep(100);
+            while (GlobalSettings.depthRequestCompleted == false) { }
             refreshTx();
-            Thread.Sleep(100);
+            while (GlobalSettings.txRequestCompleted == false) { }
             refreshGain();
-            Thread.Sleep(100);
+            while (GlobalSettings.gainhRequestCompleted == false) { }
         }
 
         private void btnFreeze_Click(object sender, RoutedEventArgs e)
