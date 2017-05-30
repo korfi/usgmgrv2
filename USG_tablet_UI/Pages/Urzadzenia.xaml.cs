@@ -31,6 +31,7 @@ namespace USG_tablet_UI
         {
             InitializeComponent();
             GlobalSettings.currentPage = "Urzadzenia";
+            
             GlobalSettings.vh = new VideoHandler(imgVideo);
             GlobalSettings.vh.connect(GlobalSettings.uScanIP);          
             GlobalSettings.conn = new TCPconnection(GlobalSettings.uScanIP, 13000);
@@ -46,12 +47,7 @@ namespace USG_tablet_UI
             }
             //GlobalSettings.gainRefreshTimer.Start(); 
             refreshGain();
-        }
-
-        private void btnWstecz_Click(object sender, RoutedEventArgs e)
-        {
-            GlobalSettings.disconnectSocketStream();
-            this.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
+            refreshDepth();
         }
 
         private void btnFreeze_Click(object sender, RoutedEventArgs e)
@@ -69,11 +65,6 @@ namespace USG_tablet_UI
         {
             GlobalSettings.conn.send("gadn");
             refreshGain();
-        }
-
-        private void btn8bit_Click(object sender, RoutedEventArgs e)
-        {
-            GlobalSettings.conn.send("8bgr");
         }
 
         private void refreshGain(object sender, EventArgs e)
@@ -114,6 +105,68 @@ namespace USG_tablet_UI
                     catch (Exception ex) { GlobalSettings.gainRequestCompleted = true; };
                 }).Start();
             }
+        }
+
+        private void refreshDepth()
+        {
+            if (GlobalSettings.depthRequestCompleted == true)
+            {
+                GlobalSettings.depthRequestCompleted = false;
+                GlobalSettings.conn.send("gimr");
+                new Thread(() =>
+                {
+                    try
+                    {
+                        Thread.CurrentThread.IsBackground = true;
+                        string content = GlobalSettings.reader.ReadLine();
+                        this.lblDepth.Dispatcher.Invoke((Action)delegate { lblDepth.Content = content; });
+                        GlobalSettings.depthRequestCompleted = true;
+                    }
+                    catch (Exception ex) { GlobalSettings.depthRequestCompleted = true; };
+                }).Start();
+            }
+        }
+
+        private void refreshTx()
+        {
+            if (GlobalSettings.txRequestCompleted == true)
+            {
+                GlobalSettings.txRequestCompleted = false;
+                GlobalSettings.conn.send("ggtx");
+                new Thread(() =>
+                {
+                    try
+                    {
+                        Thread.CurrentThread.IsBackground = true;
+                        string content = GlobalSettings.reader.ReadLine();
+                        this.lblTx.Dispatcher.Invoke((Action)delegate { lblTx.Content = content; });
+                        GlobalSettings.txRequestCompleted = true;
+                    }
+                    catch (Exception ex) { GlobalSettings.txRequestCompleted = true; };
+                }).Start();
+            }
+        }
+
+        private void btnDepthUp_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("arup");
+            
+        }
+
+        private void btnDepthDown_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("ardn");
+        }
+
+        private void btnSaveImage_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("save");
+        }
+
+        private void btnEndExam_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.disconnectSocketStream();
+            this.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
         }
     }
 }

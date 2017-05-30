@@ -8,13 +8,19 @@
 	Title="Urzadzenia">
 
     <Grid>
+        <Image HorizontalAlignment="Left" Height="1280" Margin="0,0,0,0" VerticalAlignment="Top" Width="800" Source="pack://application:,,,/gfx/badanie.png"/>
         <Image x:Name="imgVideo" HorizontalAlignment="Left" Height="471" VerticalAlignment="Top" Width="800"/>
-        <Button x:Name="btnFreeze" Content="FREEZE" HorizontalAlignment="Left" Margin="567,627,0,0" VerticalAlignment="Top" Width="174" Height="53" Click="btnFreeze_Click"/>
-        <Button x:Name="btnGainUp" Content="GAIN UP" HorizontalAlignment="Left" Margin="90,546,0,0" VerticalAlignment="Top" Width="173" Height="49" Click="btnGainUp_Click"/>
-        <Button x:Name="btn8bit" Content="8-BIT GREYSCALE" HorizontalAlignment="Left" Margin="348,627,0,0" VerticalAlignment="Top" Width="173" Height="53" Click="btn8bit_Click"/>
-        <Button x:Name="btnGainDown" Content="GAIN DOWN" HorizontalAlignment="Left" Margin="90,627,0,0" VerticalAlignment="Top" Width="173" Height="44" Click="btnGainDown_Click"/>
-        <Label x:Name="lblGain" Content="Gain: " HorizontalAlignment="Left" Margin="348,546,0,0" VerticalAlignment="Top" Width="106"/>
-        <Button x:Name="btnWstecz" Content="WSTECZ" HorizontalAlignment="Left" Margin="10,756,0,0" VerticalAlignment="Top" Width="780" Height="75" Click="btnWstecz_Click"/>
+        <Button x:Name="btnFreeze" Content="" HorizontalAlignment="Left" Margin="128,982,0,0" VerticalAlignment="Top" Width="148" Height="141" Click="btnFreeze_Click" Opacity="0"/>
+        <Button x:Name="btnGainUp" HorizontalAlignment="Left" Margin="258,890,0,0" VerticalAlignment="Top" Width="68" Height="70" Click="btnGainUp_Click" Opacity="0"/>
+        <Button x:Name="btnGainDown" Content="GAIN DOWN" HorizontalAlignment="Left" Margin="84,890,0,0" VerticalAlignment="Top" Width="68" Height="70" Click="btnGainDown_Click" Opacity="0"/>
+        <Label x:Name="lblGain" Content="" HorizontalAlignment="Left" Margin="28,558,0,0" VerticalAlignment="Top" Width="84" Height="34" HorizontalContentAlignment="Center" FontFamily="Lato" FontSize="18"/>
+        <Button x:Name="btnDepthUp" Content="GAIN UP" HorizontalAlignment="Left" Margin="258,1148,0,0" VerticalAlignment="Top" Width="68" Height="70" Opacity="0" Click="btnDepthUp_Click"/>
+        <Button x:Name="btnDepthDown" Content="GAIN UP" HorizontalAlignment="Left" Margin="84,1148,0,0" VerticalAlignment="Top" Width="68" Height="70" Opacity="0" Click="btnDepthDown_Click"/>
+        <Button x:Name="btnSaveImage" HorizontalAlignment="Left" Margin="546,996,0,0" VerticalAlignment="Top" Width="120" Height="109" Opacity="0" Click="btnSaveImage_Click"/>
+        <Button x:Name="btnEndExam" HorizontalAlignment="Left" Margin="674,23,0,0" VerticalAlignment="Top" Width="116" Height="82" Opacity="0" Click="btnEndExam_Click"/>
+        <Label x:Name="lblDepth" Content="" HorizontalAlignment="Left" Margin="192,558,0,0" VerticalAlignment="Top" Width="84" Height="34" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="18" FontFamily="Lato"/>
+        <Label x:Name="lblPreset" Content="1" HorizontalAlignment="Left" Margin="658,558,0,0" VerticalAlignment="Top" Width="84" Height="34" FontFamily="Lato" FontSize="18" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lblTx" Content="" HorizontalAlignment="Left" Margin="405,558,0,0" VerticalAlignment="Top" Width="139" Height="34" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="18" FontFamily="Lato"/>
 
     </Grid>
 </Page>

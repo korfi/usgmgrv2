@@ -20,11 +20,13 @@ namespace USG_tablet_UI
         public static BeaconWindow beaconWindow = null;
         public static MainWindow mainWindow = null;
         public static string currentPage = null;
-        public static string uScanIP = "192.168.0.5"; //"192.168.1.100";
+        public static string uScanIP = "192.168.1.100"; //"192.168.1.100";
         public static VideoHandler vh = null;
         public static TCPconnection conn = null;
         public static DispatcherTimer gainRefreshTimer = null;
         public static Boolean gainRequestCompleted = true;
+        public static Boolean depthRequestCompleted = true;
+        public static Boolean txRequestCompleted = true;
         public static Boolean videoServiceDisconnectFlag = true;
         public static TcpListener serverSocket = null;
         public static TcpClient clientSocket = null;
