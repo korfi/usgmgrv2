@@ -9,7 +9,7 @@
 
     <Grid>
         <Image HorizontalAlignment="Left" Height="1280" Margin="0,0,0,0" VerticalAlignment="Top" Width="800" Source="pack://application:,,,/gfx/badanie.png"/>
-        <Image x:Name="imgVideo" HorizontalAlignment="Left" Height="471" VerticalAlignment="Top" Width="800"/>
+        <Image x:Name="imgVideo" HorizontalAlignment="Left" Height="471" VerticalAlignment="Top" Width="800" Margin="0,116,0,0"/>
         <Button x:Name="btnFreeze" Content="" HorizontalAlignment="Left" Margin="128,982,0,0" VerticalAlignment="Top" Width="148" Height="141" Click="btnFreeze_Click" Opacity="0"/>
         <Button x:Name="btnGainUp" HorizontalAlignment="Left" Margin="258,890,0,0" VerticalAlignment="Top" Width="68" Height="70" Click="btnGainUp_Click" Opacity="0"/>
         <Button x:Name="btnGainDown" Content="GAIN DOWN" HorizontalAlignment="Left" Margin="84,890,0,0" VerticalAlignment="Top" Width="68" Height="70" Click="btnGainDown_Click" Opacity="0"/>
