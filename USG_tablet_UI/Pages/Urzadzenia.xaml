@@ -13,7 +13,7 @@
         <Button x:Name="btnFreeze" Content="" HorizontalAlignment="Left" Margin="128,982,0,0" VerticalAlignment="Top" Width="148" Height="141" Click="btnFreeze_Click" Opacity="0"/>
         <Button x:Name="btnGainUp" HorizontalAlignment="Left" Margin="258,890,0,0" VerticalAlignment="Top" Width="68" Height="70" Click="btnGainUp_Click" Opacity="0"/>
         <Button x:Name="btnGainDown" Content="GAIN DOWN" HorizontalAlignment="Left" Margin="84,890,0,0" VerticalAlignment="Top" Width="68" Height="70" Click="btnGainDown_Click" Opacity="0"/>
-        <Label x:Name="lblGain" Content="" HorizontalAlignment="Left" Margin="28,558,0,0" VerticalAlignment="Top" Width="84" Height="34" HorizontalContentAlignment="Center" FontFamily="Lato" FontSize="18"/>
+        <Label x:Name="lblGain" Content="" HorizontalAlignment="Left" Margin="28,558,0,0" VerticalAlignment="Top" Width="84" Height="34" HorizontalContentAlignment="Center" FontFamily="Lato" FontSize="18" Foreground="#DDFFFFFF"/>
         <Button x:Name="btnDepthUp" Content="GAIN UP" HorizontalAlignment="Left" Margin="258,1148,0,0" VerticalAlignment="Top" Width="68" Height="70" Opacity="0" Click="btnDepthUp_Click"/>
         <Button x:Name="btnDepthDown" Content="GAIN UP" HorizontalAlignment="Left" Margin="84,1148,0,0" VerticalAlignment="Top" Width="68" Height="70" Opacity="0" Click="btnDepthDown_Click"/>
         <Button x:Name="btnSaveImage" HorizontalAlignment="Left" Margin="546,996,0,0" VerticalAlignment="Top" Width="120" Height="109" Opacity="0" Click="btnSaveImage_Click"/>
