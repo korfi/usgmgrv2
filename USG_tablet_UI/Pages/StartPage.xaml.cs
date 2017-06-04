@@ -46,7 +46,9 @@ namespace USG_tablet_UI
 
         private void placeholderTrybik_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Pages\\PanelUzytkownika.xaml", UriKind.Relative));
+            SettingsGeneralWindow win = new SettingsGeneralWindow();
+            win.Show();
+            //this.NavigationService.Navigate(new Uri("Pages\\PanelUzytkownika.xaml", UriKind.Relative));
         }
 
         private void lblUsername_MouseDown(object sender, MouseButtonEventArgs e)
@@ -56,7 +58,7 @@ namespace USG_tablet_UI
 
         private void btnTestBeaconEnable_Click(object sender, RoutedEventArgs e)
         {
-            BeaconHandler bh = new BeaconHandler();
+            //BeaconHandler bh = new BeaconHandler();
         }
 
     }

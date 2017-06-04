@@ -48,7 +48,7 @@ namespace USG_tablet_UI.Pages.Landscape
 
         private void btnTestBeaconEnable_Click(object sender, RoutedEventArgs e)
         {
-            BeaconHandler bh = new BeaconHandler();
+            //BeaconHandler bh = new BeaconHandler();
         }
 
         private void lblUsername_MouseDown(object sender, MouseButtonEventArgs e)
