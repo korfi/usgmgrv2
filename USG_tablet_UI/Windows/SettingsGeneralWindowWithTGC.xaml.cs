@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace USG_tablet_UI
 {
     /// <summary>
-    /// Interaction logic for SettingsGeneralWindow.xaml
+    /// Interaction logic for SettingsGeneralWindowWithTGC.xaml
     /// </summary>
-    public partial class SettingsGeneralWindow : Window
+    public partial class SettingsGeneralWindowWithTGC : Window
     {
-        public SettingsGeneralWindow()
+        public SettingsGeneralWindowWithTGC()
         {
             InitializeComponent();
             this.Left = 0;
@@ -41,6 +41,16 @@ namespace USG_tablet_UI
             {
 
             }
+        }
+
+        private void btnTGC1up_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg1u");
+        }
+
+        private void btnTGC1down_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg1d");
         }
 
     }

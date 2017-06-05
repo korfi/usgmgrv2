@@ -21,6 +21,7 @@
         <Label x:Name="lblDepth" Content="" HorizontalAlignment="Left" Margin="146,558,0,0" VerticalAlignment="Top" Width="166" Height="34" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="18" FontFamily="Lato"/>
         <Label x:Name="lblPreset" Content="1" HorizontalAlignment="Left" Margin="658,558,0,0" VerticalAlignment="Top" Width="84" Height="34" FontFamily="Lato" FontSize="18" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center"/>
         <Label x:Name="lblTx" Content="" HorizontalAlignment="Left" Margin="405,558,0,0" VerticalAlignment="Top" Width="139" Height="34" Foreground="#DDFFFFFF" HorizontalContentAlignment="Center" FontSize="18" FontFamily="Lato"/>
+        <Button x:Name="btnSettings" HorizontalAlignment="Left" Margin="-4,23,0,0" VerticalAlignment="Top" Width="116" Height="82" Opacity="0" Click="btnSettings_Click"/>
 
     </Grid>
 </Page>

@@ -173,5 +173,11 @@ namespace USG_tablet_UI
             GlobalSettings.disconnectSocketStream();
             this.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
         }
+
+        private void btnSettings_Click(object sender, RoutedEventArgs e)
+        {
+            SettingsGeneralWindowWithTGC win = new SettingsGeneralWindowWithTGC();
+            win.Show();
+        }
     }
 }

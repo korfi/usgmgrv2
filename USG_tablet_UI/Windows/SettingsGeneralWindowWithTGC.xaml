@@ -1,4 +1,4 @@
-﻿<Window x:Class="USG_tablet_UI.SettingsGeneralWindow"
+﻿<Window x:Class="USG_tablet_UI.SettingsGeneralWindowWithTGC"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="SettingsGeneralWindow" Height="1280" Width="280"
@@ -9,5 +9,7 @@
         Deactivated="Window_Deactivated" >
     <Grid>
         <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Margin="78,50,0,0" VerticalAlignment="Top" Width="117" Height="54" Click="btnClose_Click"/>
+        <Button x:Name="btnTGC1up" Content="TGC 1 +" HorizontalAlignment="Left" Margin="78,200,0,0" VerticalAlignment="Top" Width="117" Height="54" Click="btnTGC1up_Click"/>
+        <Button x:Name="btnTGC1down" Content="TGC 1 -" HorizontalAlignment="Left" Margin="78,307,0,0" VerticalAlignment="Top" Width="117" Height="54" Click="btnTGC1down_Click"/>
     </Grid>
 </Window>
