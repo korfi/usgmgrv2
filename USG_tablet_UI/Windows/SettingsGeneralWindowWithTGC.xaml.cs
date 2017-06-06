@@ -22,12 +22,16 @@ namespace USG_tablet_UI
         public SettingsGeneralWindowWithTGC()
         {
             InitializeComponent();
+            GlobalSettings.settingsGeneralTGCWind = this;
+            GlobalSettings.sideMenuVisible = true;
             this.Left = 0;
             this.Top = 116;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
+            GlobalSettings.sideMenuVisible = false;
+            GlobalSettings.settingsGeneralTGCWind = null;
             this.Close();
         }
 
@@ -35,6 +39,8 @@ namespace USG_tablet_UI
         {
             try
             {
+                GlobalSettings.sideMenuVisible = false;
+                GlobalSettings.settingsGeneralTGCWind = null;
                 this.Close();
             }
             catch (Exception ex)

@@ -176,8 +176,17 @@ namespace USG_tablet_UI
 
         private void btnSettings_Click(object sender, RoutedEventArgs e)
         {
-            SettingsGeneralWindowWithTGC win = new SettingsGeneralWindowWithTGC();
-            win.Show();
+            if (GlobalSettings.sideMenuVisible == false)
+            {
+                SettingsGeneralWindowWithTGC win = new SettingsGeneralWindowWithTGC();
+                win.Show();
+            }
+            else
+            {
+                GlobalSettings.settingsGeneralTGCWind.Close();
+                GlobalSettings.sideMenuVisible = false;
+            }
+
         }
     }
 }

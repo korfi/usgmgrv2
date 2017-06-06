@@ -46,8 +46,16 @@ namespace USG_tablet_UI
 
         private void placeholderTrybik_Click(object sender, RoutedEventArgs e)
         {
-            SettingsGeneralWindow win = new SettingsGeneralWindow();
-            win.Show();
+            if (GlobalSettings.sideMenuVisible == false)
+            {
+                SettingsGeneralWindow win = new SettingsGeneralWindow();
+                win.Show();
+            }
+            else
+            {
+                GlobalSettings.settingsGeneralWind.Close();
+                GlobalSettings.sideMenuVisible = false;
+            }
             //this.NavigationService.Navigate(new Uri("Pages\\PanelUzytkownika.xaml", UriKind.Relative));
         }
 

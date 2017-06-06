@@ -32,6 +32,9 @@ namespace USG_tablet_UI
         public static TcpClient clientSocket = null;
         public static TCPlistener paramListener = null;
         public static StreamReader reader;
+        public static Boolean sideMenuVisible = false;
+        public static SettingsGeneralWindow settingsGeneralWind = null;
+        public static SettingsGeneralWindowWithTGC settingsGeneralTGCWind = null;
 
 
         public static void disconnectSocketStream() {
