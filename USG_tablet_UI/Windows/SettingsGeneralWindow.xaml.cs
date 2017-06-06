@@ -23,7 +23,7 @@ namespace USG_tablet_UI
         {
             InitializeComponent();
             this.Left = 0;
-            this.Top = 0;
+            this.Top = 116;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
