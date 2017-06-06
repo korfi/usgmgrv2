@@ -56,5 +56,75 @@ namespace USG_tablet_UI
             GlobalSettings.conn.send("tg1d");
         }
 
+        private void btnTGC2down_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg2d");
+        }
+
+        private void btnTGC2up_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg2u");
+        }
+
+        private void btnTGC3down_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg3d");
+        }
+
+        private void btnTGC3up_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg3u");
+        }
+
+        private void btnTGC4down_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg4d");
+        }
+
+        private void btnTGC4up_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg4u");
+        }
+
+        private void btnTGC5down_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg5d");
+        }
+
+        private void btnTGC5up_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg5u");
+        }
+
+        private void btnTGC6down_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg6d");
+        }
+
+        private void btnTGC6up_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg6u");
+        }
+
+        private void btnTGC7down_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg7d");
+        }
+
+        private void btnTGC7up_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg7u");
+        }
+
+        private void btnTGC8down_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg8d");
+        }
+
+        private void btnTGC8up_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("tg8u");
+        }
+
     }
 }
