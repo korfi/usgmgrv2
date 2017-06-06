@@ -23,14 +23,12 @@ namespace USG_tablet_UI
         {
             InitializeComponent();
             GlobalSettings.sideMenuVisible = true;
-            GlobalSettings.settingsGeneralWind = this;
             this.Left = 0;
             this.Top = 116;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
-            GlobalSettings.settingsGeneralWind = null;
             GlobalSettings.sideMenuVisible = false;
             this.Close();
         }
@@ -39,7 +37,6 @@ namespace USG_tablet_UI
         {
             try
             {
-                GlobalSettings.settingsGeneralWind = null;
                 GlobalSettings.sideMenuVisible = false;
                 this.Close();
             }

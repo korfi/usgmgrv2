@@ -183,8 +183,8 @@ namespace USG_tablet_UI
             }
             else
             {
-                GlobalSettings.settingsGeneralTGCWind.Close();
-                GlobalSettings.sideMenuVisible = false;
+                //GlobalSettings.settingsGeneralTGCWind.Close();
+                //GlobalSettings.sideMenuVisible = false;
             }
 
         }

@@ -53,8 +53,8 @@ namespace USG_tablet_UI
             }
             else
             {
-                GlobalSettings.settingsGeneralWind.Close();
-                GlobalSettings.sideMenuVisible = false;
+                //GlobalSettings.settingsGeneralWind.Close();
+                //GlobalSettings.sideMenuVisible = false;
             }
             //this.NavigationService.Navigate(new Uri("Pages\\PanelUzytkownika.xaml", UriKind.Relative));
         }
