@@ -24,7 +24,7 @@ namespace USG_tablet_UI
             InitializeComponent();
             GlobalSettings.sideMenuVisible = true;
             this.Left = 0;
-            this.Top = 116;
+            this.Top = 0;
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
