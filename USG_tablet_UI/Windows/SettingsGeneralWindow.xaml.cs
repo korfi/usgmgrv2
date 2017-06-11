@@ -46,5 +46,12 @@ namespace USG_tablet_UI
             }
         }
 
+        private void btnProfile_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.mainWindow.NavigationFrame.NavigationService.Navigate(new Uri("Pages\\PanelUzytkownika.xaml", UriKind.Relative));
+            GlobalSettings.sideMenuVisible = false;
+            this.Close();
+        }
+
     }
 }

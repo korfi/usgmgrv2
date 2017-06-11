@@ -8,6 +8,8 @@
         BorderThickness="0" 
         Deactivated="Window_Deactivated" >
     <Grid>
-        <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Margin="78,50,0,0" VerticalAlignment="Top" Width="117" Height="54" Click="btnClose_Click"/>
+        <Image HorizontalAlignment="Left" Height="1280" Margin="0,0,-520,0" VerticalAlignment="Top" Width="280" Source="pack://application:,,,/gfx/settingsSide.png"/>
+        <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Margin="30,130,0,0" VerticalAlignment="Top" Width="181" Height="44" Click="btnClose_Click" Opacity="0"/>
+        <Button x:Name="btnProfile" Content="Button" HorizontalAlignment="Left" Margin="18,23,0,0" VerticalAlignment="Top" Width="207" Opacity="0" Height="77" Click="btnProfile_Click"/>
     </Grid>
 </Window>
