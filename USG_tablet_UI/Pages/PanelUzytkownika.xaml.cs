@@ -31,5 +31,10 @@ namespace USG_tablet_UI.Pages
         {
             this.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
         }
+
+        private void btnWyloguj_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("Pages\\Logowanie.xaml", UriKind.Relative));
+        }
     }
 }

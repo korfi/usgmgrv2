@@ -12,7 +12,7 @@
         <Button x:Name="btnClose" Content="Close" HorizontalAlignment="Left" Margin="36,135,0,0" VerticalAlignment="Top" Width="165" Height="36" Click="btnClose_Click" Opacity="0"/>
         <Button x:Name="btnTGC1up" Content="TGC 1 +" HorizontalAlignment="Left" Margin="158,689,0,0" VerticalAlignment="Top" Width="62" Height="54" Click="btnTGC1up_Click" Opacity="0"/>
         <Button x:Name="btnTGC1down" Content="TGC 1 -" HorizontalAlignment="Left" Margin="55,689,0,0" VerticalAlignment="Top" Width="63" Height="54" Click="btnTGC1down_Click" Opacity="0"/>
-        <Button x:Name="btnClose_Copy" Content="Close" HorizontalAlignment="Left" Margin="36,192,0,0" VerticalAlignment="Top" Width="146" Height="36" Click="btnClose_Click" Opacity="0"/>
+        <Button x:Name="btnHelp" Content="Close" HorizontalAlignment="Left" Margin="36,297,0,0" VerticalAlignment="Top" Width="146" Height="36" Opacity="0" Click="btnHelp_Click"/>
         <Button x:Name="btnProfile" Content="Button" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="243" Height="78" Opacity="0"/>
         <Button x:Name="btnTGC2down" Content="TGC 1 -" HorizontalAlignment="Left" Margin="55,761,0,0" VerticalAlignment="Top" Width="63" Height="54" Opacity="0" Click="btnTGC2down_Click"/>
         <Button x:Name="btnTGC3down" Content="TGC 1 -" HorizontalAlignment="Left" Margin="55,833,0,0" VerticalAlignment="Top" Width="63" Height="51" Opacity="0" Click="btnTGC3down_Click"/>

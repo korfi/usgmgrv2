@@ -126,5 +126,10 @@ namespace USG_tablet_UI
             GlobalSettings.conn.send("tg8u");
         }
 
+        private void btnHelp_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"c:\uscan.pdf");
+        }
+
     }
 }
