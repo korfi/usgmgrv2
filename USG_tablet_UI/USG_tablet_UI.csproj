@@ -171,6 +171,9 @@
     <Compile Include="Classes funcionality\TCPconnection.cs" />
     <Compile Include="Classes funcionality\TCPlistener.cs" />
     <Compile Include="Classes funcionality\VideoHandler.cs" />
+    <Compile Include="Windows\MeasureWindow.xaml.cs">
+      <DependentUpon>MeasureWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\SettingsGeneralWindowWithTGC.xaml.cs">
       <DependentUpon>SettingsGeneralWindowWithTGC.xaml</DependentUpon>
     </Compile>
@@ -273,6 +276,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ZaplanujBadanie.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\MeasureWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

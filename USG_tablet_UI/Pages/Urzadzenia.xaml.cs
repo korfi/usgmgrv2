@@ -188,5 +188,11 @@ namespace USG_tablet_UI
             }
 
         }
+
+        private void btnMeasure_Click(object sender, RoutedEventArgs e)
+        {
+            MeasureWindow measureWin = new MeasureWindow();
+            measureWin.Show();
+        }
     }
 }
