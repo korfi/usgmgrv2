@@ -23,7 +23,8 @@ namespace USG_tablet_UI
         {
             InitializeComponent();
             this.Left = 0;
-            this.Top = 1280-675;
+            this.Top = 0;
+            //this.Top = 1280-675;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -94,6 +95,20 @@ namespace USG_tablet_UI
         private void Window_LostFocus(object sender, RoutedEventArgs e)
         {
             this.Focus();
+        }
+
+        private void btnSettings_Click(object sender, RoutedEventArgs e)
+        {
+            if (GlobalSettings.sideMenuVisible == false)
+            {
+                SettingsGeneralWindowWithTGC win = new SettingsGeneralWindowWithTGC();
+                win.Show();
+            }
+            else
+            {
+                //GlobalSettings.settingsGeneralTGCWind.Close();
+                //GlobalSettings.sideMenuVisible = false;
+            }
         }
 
     }
