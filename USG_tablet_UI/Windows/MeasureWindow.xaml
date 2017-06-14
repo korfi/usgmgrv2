@@ -6,6 +6,7 @@
         WindowStyle="None"
         BorderBrush="Black"
         BorderThickness="0"
+        AllowsTransparency="True"
         Background="Transparent" >
     <Grid>
         <Image HorizontalAlignment="Left" Height="675" Margin="0,605,0,0" VerticalAlignment="Top" Width="800" Source="pack://application:,,,/gfx/badanie_measure_v1_800_675.png"/>
