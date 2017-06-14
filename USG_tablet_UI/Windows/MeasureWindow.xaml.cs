@@ -23,7 +23,66 @@ namespace USG_tablet_UI
         {
             InitializeComponent();
             this.Left = 0;
-            this.Top = 0;
+            this.Top = 1280-675;
         }
+
+        private void Window_Deactivated(object sender, EventArgs e)
+        {
+            this.Focus();
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnMarkerA_Click(object sender, RoutedEventArgs e)
+        {
+            if (imgMarkerA.Visibility == System.Windows.Visibility.Visible)
+            {
+                imgMarkerA.Visibility = System.Windows.Visibility.Hidden;
+            }
+            else if (imgMarkerA.Visibility == System.Windows.Visibility.Hidden)
+            {
+                imgMarkerA.Visibility = System.Windows.Visibility.Visible;
+            }
+        }
+
+        private void btnMarkerB_Click(object sender, RoutedEventArgs e)
+        {
+            if (imgMarkerB.Visibility == System.Windows.Visibility.Visible)
+            {
+                imgMarkerB.Visibility = System.Windows.Visibility.Hidden;
+            }
+            else if (imgMarkerB.Visibility == System.Windows.Visibility.Hidden)
+            {
+                imgMarkerB.Visibility = System.Windows.Visibility.Visible;
+            }
+        }
+
+        private void btnMarkerC_Click(object sender, RoutedEventArgs e)
+        {
+            if (imgMarkerC.Visibility == System.Windows.Visibility.Visible)
+            {
+                imgMarkerC.Visibility = System.Windows.Visibility.Hidden;
+            }
+            else if (imgMarkerC.Visibility == System.Windows.Visibility.Hidden)
+            {
+                imgMarkerC.Visibility = System.Windows.Visibility.Visible;
+            }
+        }
+
+        private void btnMarkerD_Click(object sender, RoutedEventArgs e)
+        {
+            if (imgMarkerD.Visibility == System.Windows.Visibility.Visible)
+            {
+                imgMarkerD.Visibility = System.Windows.Visibility.Hidden;
+            }
+            else if (imgMarkerD.Visibility == System.Windows.Visibility.Hidden)
+            {
+                imgMarkerD.Visibility = System.Windows.Visibility.Visible;
+            }
+        }
+
     }
 }

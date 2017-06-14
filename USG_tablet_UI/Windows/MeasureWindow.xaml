@@ -8,6 +8,15 @@
         BorderThickness="0" 
         Deactivated="Window_Deactivated" >
     <Grid>
-        
+        <Image HorizontalAlignment="Left" Height="675" Margin="0,0,0,-375" VerticalAlignment="Top" Width="800" Source="pack://application:,,,/gfx/badanie_measure_v1_800_675.png"/>
+        <Button x:Name="btnBack" Content="Button" HorizontalAlignment="Left" Margin="260,564,0,-334" VerticalAlignment="Top" Width="288" Height="70" Opacity="0" Click="btnBack_Click"/>
+        <Button x:Name="btnMarkerA" Content="Button" HorizontalAlignment="Left" Margin="30,44,0,0" VerticalAlignment="Top" Width="171" Height="70" Opacity="0" Click="btnMarkerA_Click"/>
+        <Button x:Name="btnMarkerB" Content="Button" HorizontalAlignment="Left" Margin="214,44,0,0" VerticalAlignment="Top" Width="177" Height="70" Opacity="0" Click="btnMarkerB_Click"/>
+        <Button x:Name="btnMarkerC" Content="Button" HorizontalAlignment="Left" Margin="30,134,0,0" VerticalAlignment="Top" Width="171" Height="70" Opacity="0" Click="btnMarkerC_Click"/>
+        <Button x:Name="btnMarkerD" Content="Button" HorizontalAlignment="Left" Margin="214,134,0,0" VerticalAlignment="Top" Width="177" Height="70" Opacity="0" Click="btnMarkerD_Click"/>
+        <Image x:Name="imgMarkerA" HorizontalAlignment="Left" Height="64" Margin="35,50,0,0" VerticalAlignment="Top" Width="161" Source="pack://application:,,,/gfx/markerA.png" IsHitTestVisible="False" Visibility="Hidden"/>
+        <Image x:Name="imgMarkerB" HorizontalAlignment="Left" Height="64" Margin="225,50,0,0" VerticalAlignment="Top" Width="161" Source="/USG_tablet_UI;component/gfx/markerB.png" IsHitTestVisible="False" Visibility="Hidden"/>
+        <Image x:Name="imgMarkerC" HorizontalAlignment="Left" Height="64" Margin="35,140,0,0" VerticalAlignment="Top" Width="161" Source="/USG_tablet_UI;component/gfx/markerC.png" IsHitTestVisible="False" Visibility="Hidden"/>
+        <Image x:Name="imgMarkerD" HorizontalAlignment="Left" Height="64" Margin="225,140,0,0" VerticalAlignment="Top" Width="161" Source="/USG_tablet_UI;component/gfx/markerD.png" IsHitTestVisible="False" Visibility="Hidden"/>
     </Grid>
 </Window>
