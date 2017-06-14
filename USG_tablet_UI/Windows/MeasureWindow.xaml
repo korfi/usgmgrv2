@@ -5,8 +5,7 @@
         ResizeMode="NoResize" 
         WindowStyle="None"
         BorderBrush="Black"
-        BorderThickness="0" 
-        Deactivated="Window_Deactivated" >
+        BorderThickness="0" LostFocus="Window_LostFocus" >
     <Grid>
         <Image HorizontalAlignment="Left" Height="675" Margin="0,0,0,0" VerticalAlignment="Top" Width="800" Source="pack://application:,,,/gfx/badanie_measure_v1_800_675.png"/>
         <Button x:Name="btnBack" Content="Button" HorizontalAlignment="Left" Margin="260,564,0,-334" VerticalAlignment="Top" Width="288" Height="70" Opacity="0" Click="btnBack_Click"/>

@@ -26,11 +26,6 @@ namespace USG_tablet_UI
             this.Top = 1280-675;
         }
 
-        private void Window_Deactivated(object sender, EventArgs e)
-        {
-            this.Show();
-        }
-
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -94,6 +89,11 @@ namespace USG_tablet_UI
                 imgMarkerC.Visibility = System.Windows.Visibility.Hidden;
                 imgMarkerD.Visibility = System.Windows.Visibility.Visible;
             }
+        }
+
+        private void Window_LostFocus(object sender, RoutedEventArgs e)
+        {
+            this.Focus();
         }
 
     }
