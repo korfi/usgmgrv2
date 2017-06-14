@@ -28,7 +28,7 @@ namespace USG_tablet_UI
 
         private void Window_Deactivated(object sender, EventArgs e)
         {
-            this.Focus();
+            this.Show();
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
@@ -45,6 +45,9 @@ namespace USG_tablet_UI
             else if (imgMarkerA.Visibility == System.Windows.Visibility.Hidden)
             {
                 imgMarkerA.Visibility = System.Windows.Visibility.Visible;
+                imgMarkerB.Visibility = System.Windows.Visibility.Hidden;
+                imgMarkerC.Visibility = System.Windows.Visibility.Hidden;
+                imgMarkerD.Visibility = System.Windows.Visibility.Hidden;
             }
         }
 
@@ -56,7 +59,10 @@ namespace USG_tablet_UI
             }
             else if (imgMarkerB.Visibility == System.Windows.Visibility.Hidden)
             {
+                imgMarkerA.Visibility = System.Windows.Visibility.Hidden;
                 imgMarkerB.Visibility = System.Windows.Visibility.Visible;
+                imgMarkerC.Visibility = System.Windows.Visibility.Hidden;
+                imgMarkerD.Visibility = System.Windows.Visibility.Hidden;
             }
         }
 
@@ -68,7 +74,10 @@ namespace USG_tablet_UI
             }
             else if (imgMarkerC.Visibility == System.Windows.Visibility.Hidden)
             {
+                imgMarkerA.Visibility = System.Windows.Visibility.Hidden;
+                imgMarkerB.Visibility = System.Windows.Visibility.Hidden;
                 imgMarkerC.Visibility = System.Windows.Visibility.Visible;
+                imgMarkerD.Visibility = System.Windows.Visibility.Hidden;
             }
         }
 
@@ -80,6 +89,9 @@ namespace USG_tablet_UI
             }
             else if (imgMarkerD.Visibility == System.Windows.Visibility.Hidden)
             {
+                imgMarkerA.Visibility = System.Windows.Visibility.Hidden;
+                imgMarkerB.Visibility = System.Windows.Visibility.Hidden;
+                imgMarkerC.Visibility = System.Windows.Visibility.Hidden;
                 imgMarkerD.Visibility = System.Windows.Visibility.Visible;
             }
         }
