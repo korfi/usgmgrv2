@@ -5,10 +5,8 @@
         ResizeMode="NoResize" 
         WindowStyle="None"
         BorderBrush="Black"
-        BorderThickness="0" >
-    <Window.Background>
-        <SolidColorBrush Opacity="0" Color="White"/>
-    </Window.Background>
+        BorderThickness="0"
+        Background="Transparent" >
     <Grid>
         <Image HorizontalAlignment="Left" Height="675" Margin="0,605,0,0" VerticalAlignment="Top" Width="800" Source="pack://application:,,,/gfx/badanie_measure_v1_800_675.png"/>
         <Button x:Name="btnBack" Content="Button" HorizontalAlignment="Left" Margin="260,1169,0,-334" VerticalAlignment="Top" Width="288" Height="70" Opacity="0" Click="btnBack_Click"/>
@@ -16,10 +14,10 @@
         <Button x:Name="btnMarkerB" Content="Button" HorizontalAlignment="Left" Margin="214,649,0,0" VerticalAlignment="Top" Width="177" Height="70" Opacity="0" Click="btnMarkerB_Click"/>
         <Button x:Name="btnMarkerC" Content="Button" HorizontalAlignment="Left" Margin="30,739,0,0" VerticalAlignment="Top" Width="171" Height="70" Opacity="0" Click="btnMarkerC_Click"/>
         <Button x:Name="btnMarkerD" Content="Button" HorizontalAlignment="Left" Margin="214,739,0,0" VerticalAlignment="Top" Width="177" Height="70" Opacity="0" Click="btnMarkerD_Click"/>
-        <Image x:Name="imgMarkerA" HorizontalAlignment="Left" Height="64" Margin="35,50,0,0" VerticalAlignment="Top" Width="161" Source="pack://application:,,,/gfx/markerA.png" IsHitTestVisible="False" Visibility="Hidden"/>
-        <Image x:Name="imgMarkerB" HorizontalAlignment="Left" Height="64" Margin="225,50,0,0" VerticalAlignment="Top" Width="161" Source="/USG_tablet_UI;component/gfx/markerB.png" IsHitTestVisible="False" Visibility="Hidden"/>
-        <Image x:Name="imgMarkerC" HorizontalAlignment="Left" Height="64" Margin="35,140,0,0" VerticalAlignment="Top" Width="161" Source="/USG_tablet_UI;component/gfx/markerC.png" IsHitTestVisible="False" Visibility="Hidden"/>
-        <Image x:Name="imgMarkerD" HorizontalAlignment="Left" Height="64" Margin="225,140,0,0" VerticalAlignment="Top" Width="161" Source="/USG_tablet_UI;component/gfx/markerD.png" IsHitTestVisible="False" Visibility="Hidden"/>
+        <Image x:Name="imgMarkerA" HorizontalAlignment="Left" Height="64" Margin="35,655,0,0" VerticalAlignment="Top" Width="161" Source="pack://application:,,,/gfx/markerA.png" IsHitTestVisible="False" Visibility="Hidden"/>
+        <Image x:Name="imgMarkerB" HorizontalAlignment="Left" Height="64" Margin="225,655,0,0" VerticalAlignment="Top" Width="161" Source="/USG_tablet_UI;component/gfx/markerB.png" IsHitTestVisible="False" Visibility="Hidden"/>
+        <Image x:Name="imgMarkerC" HorizontalAlignment="Left" Height="64" Margin="35,745,0,0" VerticalAlignment="Top" Width="161" Source="/USG_tablet_UI;component/gfx/markerC.png" IsHitTestVisible="False" Visibility="Hidden"/>
+        <Image x:Name="imgMarkerD" HorizontalAlignment="Left" Height="64" Margin="225,745,0,0" VerticalAlignment="Top" Width="161" Source="/USG_tablet_UI;component/gfx/markerD.png" IsHitTestVisible="False" Visibility="Hidden"/>
         <Button x:Name="btnSettings" Content="Button" HorizontalAlignment="Left" Margin="-4,23,0,0" VerticalAlignment="Top" Width="116" Opacity="0" Height="82" Click="btnSettings_Click"/>
     </Grid>
 </Window>
