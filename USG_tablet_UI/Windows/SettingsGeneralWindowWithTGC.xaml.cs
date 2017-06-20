@@ -134,7 +134,7 @@ namespace USG_tablet_UI
         private void btnPresets_Click(object sender, RoutedEventArgs e)
         {
             MeasureWindow presetsWin = new MeasureWindow();
-            presetsWin.Owner = Window.GetWindow(this);
+            presetsWin.Owner = GlobalSettings.mainWindow;
             presetsWin.Show();
         }
 
