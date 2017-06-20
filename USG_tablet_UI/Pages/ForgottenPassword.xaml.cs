@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace USG_tablet_UI
+namespace USG_tablet_UI.Pages
 {
     /// <summary>
-    /// Interaction logic for Logowanie.xaml
+    /// Interaction logic for ForgottenPassword.xaml
     /// </summary>
-    public partial class Logowanie : Page
+    public partial class ForgottenPassword : Page
     {
-        public Logowanie()
+        public ForgottenPassword()
         {
             InitializeComponent();
-            GlobalSettings.currentPage = "Logowanie";
         }
 
         private void rctgZaloguj_MouseDown(object sender, MouseButtonEventArgs e)
@@ -31,9 +30,9 @@ namespace USG_tablet_UI
             this.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
         }
 
-        private void btnForgotPassword_Click(object sender, RoutedEventArgs e)
+        private void btnSend_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Pages\\ForgottenPassword.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
         }
     }
 }
