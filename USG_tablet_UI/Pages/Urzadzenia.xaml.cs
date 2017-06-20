@@ -171,6 +171,15 @@ namespace USG_tablet_UI
         private void btnEndExam_Click(object sender, RoutedEventArgs e)
         {
             GlobalSettings.disconnectSocketStream();
+            if (GlobalSettings.measureWin != null)
+            {
+                GlobalSettings.measureWin.Close();
+            }
+
+            if (GlobalSettings.presetWin != null)
+            {
+                GlobalSettings.presetWin.Close();
+            }
             this.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
         }
 
@@ -192,6 +201,7 @@ namespace USG_tablet_UI
         private void btnMeasure_Click(object sender, RoutedEventArgs e)
         {
             MeasureWindow measureWin = new MeasureWindow();
+            measureWin.Owner = Window.GetWindow(this);
             measureWin.Show();
         }
     }

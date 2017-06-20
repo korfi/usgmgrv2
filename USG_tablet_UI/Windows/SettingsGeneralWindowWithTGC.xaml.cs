@@ -131,5 +131,12 @@ namespace USG_tablet_UI
             System.Diagnostics.Process.Start(@"c:\uscan.pdf");
         }
 
+        private void btnPresets_Click(object sender, RoutedEventArgs e)
+        {
+            MeasureWindow presetsWin = new MeasureWindow();
+            presetsWin.Owner = Window.GetWindow(this);
+            presetsWin.Show();
+        }
+
     }
 }

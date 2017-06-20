@@ -24,16 +24,20 @@ namespace USG_tablet_UI
             InitializeComponent();
             this.Left = 0;
             this.Top = 0;
-            //this.Top = 1280-675;
+            GlobalSettings.conn.send("tabm");
+            GlobalSettings.measureWin = this;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            GlobalSettings.measureWin = null;
+            GlobalSettings.conn.send("tabb");
         }
 
         private void btnMarkerA_Click(object sender, RoutedEventArgs e)
         {
+            GlobalSettings.conn.send("mrka");
             if (imgMarkerA.Visibility == System.Windows.Visibility.Visible)
             {
                 imgMarkerA.Visibility = System.Windows.Visibility.Hidden;
@@ -49,6 +53,7 @@ namespace USG_tablet_UI
 
         private void btnMarkerB_Click(object sender, RoutedEventArgs e)
         {
+            GlobalSettings.conn.send("mrkb");
             if (imgMarkerB.Visibility == System.Windows.Visibility.Visible)
             {
                 imgMarkerB.Visibility = System.Windows.Visibility.Hidden;
@@ -64,6 +69,7 @@ namespace USG_tablet_UI
 
         private void btnMarkerC_Click(object sender, RoutedEventArgs e)
         {
+            GlobalSettings.conn.send("mrkc");
             if (imgMarkerC.Visibility == System.Windows.Visibility.Visible)
             {
                 imgMarkerC.Visibility = System.Windows.Visibility.Hidden;
@@ -79,6 +85,7 @@ namespace USG_tablet_UI
 
         private void btnMarkerD_Click(object sender, RoutedEventArgs e)
         {
+            GlobalSettings.conn.send("mrkd");
             if (imgMarkerD.Visibility == System.Windows.Visibility.Visible)
             {
                 imgMarkerD.Visibility = System.Windows.Visibility.Hidden;
@@ -97,18 +104,29 @@ namespace USG_tablet_UI
             this.Focus();
         }
 
-        private void btnSettings_Click(object sender, RoutedEventArgs e)
+        private void btnMarkerUp_Click(object sender, RoutedEventArgs e)
         {
-            if (GlobalSettings.sideMenuVisible == false)
-            {
-                SettingsGeneralWindowWithTGC win = new SettingsGeneralWindowWithTGC();
-                win.Show();
-            }
-            else
-            {
-                //GlobalSettings.settingsGeneralTGCWind.Close();
-                //GlobalSettings.sideMenuVisible = false;
-            }
+            GlobalSettings.conn.send("mkup");
+        }
+
+        private void btnMarkerDown_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("mkdn");
+        }
+
+        private void btnMarkerLeft_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("mkle");
+        }
+
+        private void btnMarkerRight_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("mkri");
+        }
+
+        private void btnMarkerClear_Click(object sender, RoutedEventArgs e)
+        {
+            GlobalSettings.conn.send("mrcl");
         }
 
     }

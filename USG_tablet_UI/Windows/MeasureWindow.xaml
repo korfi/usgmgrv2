@@ -19,6 +19,10 @@
         <Image x:Name="imgMarkerB" HorizontalAlignment="Left" Height="64" Margin="225,655,0,0" VerticalAlignment="Top" Width="161" Source="/USG_tablet_UI;component/gfx/markerB.png" IsHitTestVisible="False" Visibility="Hidden"/>
         <Image x:Name="imgMarkerC" HorizontalAlignment="Left" Height="64" Margin="35,745,0,0" VerticalAlignment="Top" Width="161" Source="/USG_tablet_UI;component/gfx/markerC.png" IsHitTestVisible="False" Visibility="Hidden"/>
         <Image x:Name="imgMarkerD" HorizontalAlignment="Left" Height="64" Margin="225,745,0,0" VerticalAlignment="Top" Width="161" Source="/USG_tablet_UI;component/gfx/markerD.png" IsHitTestVisible="False" Visibility="Hidden"/>
-        <Button x:Name="btnSettings" Content="Button" HorizontalAlignment="Left" Margin="-4,23,0,0" VerticalAlignment="Top" Width="116" Opacity="0" Height="82" Click="btnSettings_Click"/>
+        <Button x:Name="btnMarkerLeft" Content="Button" HorizontalAlignment="Left" Margin="89,944,0,0" VerticalAlignment="Top" Width="79" Opacity="0" Height="81" Click="btnMarkerLeft_Click"/>
+        <Button x:Name="btnMarkerUp" Content="Button" HorizontalAlignment="Left" Margin="179,862,0,0" VerticalAlignment="Top" Width="79" Opacity="0" Height="81" RenderTransformOrigin="1.4,0.309" Click="btnMarkerUp_Click"/>
+        <Button x:Name="btnMarkerDown" Content="Button" HorizontalAlignment="Left" Margin="179,1029,0,0" VerticalAlignment="Top" Width="79" Opacity="0" Height="81" RenderTransformOrigin="1.4,0.309" Click="btnMarkerDown_Click"/>
+        <Button x:Name="btnMarkerRight" Content="Button" HorizontalAlignment="Left" Margin="260,944,0,0" VerticalAlignment="Top" Width="79" Opacity="0" Height="81" RenderTransformOrigin="1.4,0.309" Click="btnMarkerRight_Click"/>
+        <Button x:Name="btnMarkerClear" Content="Button" HorizontalAlignment="Left" Margin="536,939,0,0" VerticalAlignment="Top" Width="174" Opacity="0" Height="68" RenderTransformOrigin="0.507,0.489" Click="btnMarkerClear_Click"/>
     </Grid>
 </Window>
