@@ -135,6 +135,7 @@ namespace USG_tablet_UI
         {
             MeasureWindow presetsWin = new MeasureWindow();
             presetsWin.Owner = GlobalSettings.mainWindow;
+            this.Close();
             presetsWin.Show();
         }
 

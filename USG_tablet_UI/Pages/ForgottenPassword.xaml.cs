@@ -27,12 +27,12 @@ namespace USG_tablet_UI.Pages
 
         private void rctgZaloguj_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages\\Logowanie.xaml", UriKind.Relative));
         }
 
         private void btnSend_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("Pages\\StartPage.xaml", UriKind.Relative));
+            this.NavigationService.Navigate(new Uri("Pages\\Logowanie.xaml", UriKind.Relative));
         }
     }
 }

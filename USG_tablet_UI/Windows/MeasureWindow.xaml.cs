@@ -33,6 +33,7 @@ namespace USG_tablet_UI
             this.Close();
             GlobalSettings.measureWin = null;
             GlobalSettings.conn.send("tabb");
+            GlobalSettings.conn.send("hide");
         }
 
         private void btnMarkerA_Click(object sender, RoutedEventArgs e)
