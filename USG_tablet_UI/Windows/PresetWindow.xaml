@@ -10,7 +10,7 @@
         Background="Transparent" >
 
     <Grid>
-        <Image HorizontalAlignment="Left" Height="675" Margin="0,605,0,0" VerticalAlignment="Top" Width="800" Source="pack://application:,,,/gfx/badanie_measure_v1_800_675.png"/>
+        <Image HorizontalAlignment="Left" Height="675" Margin="0,605,0,0" VerticalAlignment="Top" Width="800" Source="pack://application:,,,/gfx/presets.png"/>
         <Button x:Name="btnBack" Content="Button" HorizontalAlignment="Left" Margin="266,1170,0,0" VerticalAlignment="Top" Width="278" Opacity="0" Height="66" Click="btnBack_Click"/>
     </Grid>
 </Window>
