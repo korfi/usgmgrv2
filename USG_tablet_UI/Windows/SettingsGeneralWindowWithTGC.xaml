@@ -29,5 +29,6 @@
         <Button x:Name="btnTGC7up" Content="TGC 1 +" HorizontalAlignment="Left" Margin="158,1109,0,0" VerticalAlignment="Top" Width="62" Height="54" Opacity="0" Click="btnTGC7up_Click"/>
         <Button x:Name="btnTGC8up" Content="TGC 1 +" HorizontalAlignment="Left" Margin="158,1179,0,0" VerticalAlignment="Top" Width="62" Height="54" Opacity="0" Click="btnTGC8up_Click"/>
         <Button x:Name="btnPresets" Content="Close" HorizontalAlignment="Left" Margin="36,242,0,0" VerticalAlignment="Top" Width="165" Height="36" Opacity="0" Click="btnPresets_Click"/>
+        <Button x:Name="btnSignalPalette" Content="TGC 1 -" HorizontalAlignment="Left" Margin="55,453,0,0" VerticalAlignment="Top" Width="165" Height="102" Opacity="0" Click="btnSignalPalette_Click"/>
     </Grid>
 </Window>
