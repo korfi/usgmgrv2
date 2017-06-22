@@ -142,7 +142,8 @@ namespace USG_tablet_UI
         private void btnSignalPalette_Click(object sender, RoutedEventArgs e)
         {
             signalPaletteWindow sigPalWin = new signalPaletteWindow();
-            sigPalWin.Parent = GlobalSettings.mainWindow;
+            sigPalWin.Owner = GlobalSettings.mainWindow;
+            this.Close();
             sigPalWin.Show();
         }
 

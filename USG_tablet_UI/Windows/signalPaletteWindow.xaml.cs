@@ -22,6 +22,8 @@ namespace USG_tablet_UI
         public signalPaletteWindow()
         {
             InitializeComponent();
+            this.Top = 0;
+            this.Left = 0;
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
